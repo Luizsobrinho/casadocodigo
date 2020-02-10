@@ -23,7 +23,6 @@ public class HomeController {
 		List<Produto> produtos = produtoDao.listar();
 		ModelAndView modelAndView = new ModelAndView("home");
 		modelAndView.addObject("produtos", produtos);
-		System.out.println("Alteração");
 		return modelAndView;
 	}
 }

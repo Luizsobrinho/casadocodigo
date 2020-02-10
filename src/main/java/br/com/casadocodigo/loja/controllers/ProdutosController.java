@@ -40,7 +40,7 @@ public class ProdutosController {
 
 	@RequestMapping("form")
 	public ModelAndView form(Produto produto) {
-		ModelAndView modelAndView = new ModelAndView("produtos/form");
+		ModelAndView modelAndView = new ModelAndView("/produtos/form");
 		modelAndView.addObject("tipos", TipoPreco.values());
 		return modelAndView;
 	}
@@ -78,9 +78,4 @@ public class ProdutosController {
 		return modelAndView;
 	}
 	
-//	@RequestMapping("/{id}")
-//	@ResponseBody
-//	public Produto detalheJSON(@PathVariable("id") Integer id){
-//	    return produtoDao.find(id);
-//	}
 }
