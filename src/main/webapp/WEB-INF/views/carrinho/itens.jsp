@@ -132,6 +132,7 @@
 						<form action="${s:mvcUrl('PC#finalizar').build()}" method="post">
 							<input type="submit" class="checkout" name="checkout"
 								value="Finalizar compra" />
+								<input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }" />
 						</form>
 					</td>
 
