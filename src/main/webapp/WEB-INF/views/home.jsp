@@ -55,8 +55,6 @@
 			</li>
 		</ul>
 
-
-
 	</section>
 
 </tags:pageTemplate>
