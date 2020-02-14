@@ -6,7 +6,6 @@
 
 <%@ taglib tagdir="/WEB-INF/tags/" prefix="tags"%>
 
-<%@include file="/WEB-INF/views/cabecalho.jsp" %>
 <tags:pageTemplate titulo="Livros de Java, Android, iOS, Mobile e muito mais...">
 
 	<section id="index-section" class="container middle">
@@ -61,4 +60,3 @@
 	</section>
 
 </tags:pageTemplate>
-<%@include file="/WEB-INF/views/rodape.jsp" %>

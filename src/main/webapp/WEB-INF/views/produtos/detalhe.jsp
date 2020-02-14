@@ -1,11 +1,13 @@
 <%@ page pageEncoding="UTF-8" %>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" %>geEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
-<%@include file="/WEB-INF/views/cabecalho.jsp" %>
+<%@ taglib tagdir="/WEB-INF/tags/" prefix="tags"%>
+
+<tags:pageTemplate titulo="Livros de Java, Android, iOS, Mobile e muito mais...">
 
 	<article id="livro-css-eficiente">
 		<header id="product-highlight" class="clearfix">
@@ -62,4 +64,4 @@
 		</div>
 	</article>
 
-<%@include file="/WEB-INF/views/rodape.jsp" %>
+</tags:pageTemplate>
