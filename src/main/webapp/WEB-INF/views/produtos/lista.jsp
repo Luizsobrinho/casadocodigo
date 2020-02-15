@@ -12,8 +12,7 @@
 	<link rel="stylesheet" href="${cssPath}/bootstrap.min.css" />
 	<link rel="stylesheet" href="${cssPath}/bootstrap-theme.min.css" />
 
-	<title>Livros de Java, Android, iPhone, Ruby, PHP e muito mais -
-		Casa do Código</title>
+	<title>Livros de Java, Android, iPhone, Ruby, PHP e muito mais - Casa do Código</title>
 </head>
 
 <body>
