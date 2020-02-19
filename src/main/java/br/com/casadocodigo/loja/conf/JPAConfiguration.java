@@ -3,6 +3,7 @@ package br.com.casadocodigo.loja.conf;
 import java.util.Properties;
 
 import javax.persistence.EntityManagerFactory;
+import javax.sql.DataSource;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -22,24 +23,33 @@ public class JPAConfiguration {
 
 		factoryBean.setJpaVendorAdapter(vendorAdapter);
 
+		factoryBean.setDataSource(dataSource());
+
+		Properties pros = aditionalProperties();
+		factoryBean.setJpaProperties(pros);
+
+		factoryBean.setPackagesToScan("br.com.casadocodigo.loja.models");
+
+		return factoryBean;
+	}
+
+	@Bean
+	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setUsername("root");
 		dataSource.setPassword("root");
 		dataSource.setUrl("jdbc:mysql://localhost:3306/casadocodigo?useTimezone=true&serverTimezone=UTC");
 		dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+		return dataSource;
 
-		factoryBean.setDataSource(dataSource);
+	}
 
+	private Properties aditionalProperties() {
 		Properties props = new Properties();
 		props.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
 		props.setProperty("hibernate.show_sql", "true");
 		props.setProperty("hibernate.hbm2ddl.auto", "update");
-
-		factoryBean.setJpaProperties(props);
-
-		factoryBean.setPackagesToScan("br.com.casadocodigo.loja.models");
-
-		return factoryBean;
+		return props;
 	}
 
 	@Bean
